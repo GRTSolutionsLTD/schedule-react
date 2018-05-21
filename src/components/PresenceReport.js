@@ -1,7 +1,6 @@
 import React from 'react'
 import{ readJson } from '../actions/readJsonAction'
-import {getAllUsers} from '../actions/presenceAction'
-import {deleteUser} from '../actions/presenceAction'
+import {getAllUsers} from '../actions/PresenceAction'
 import { connect } from 'react-redux';
 import Date from '../components/DatePicker'
 
@@ -15,9 +14,7 @@ class User extends React.Component {
   
   render(){
     return(
-      <div>
-        {/* <button onClick={() => this.props.delete(this.props.user.ID)}>delete</button> */}
-    <tbody>
+  
       <tr>
         
       <td>{this.props.user.ID}</td>
@@ -25,8 +22,6 @@ class User extends React.Component {
       <td>{this.props.user.ToHour}</td>
       <td>{this.props.user.date}</td>
       </tr>
-      </tbody>
-      </div>
     );
   }
 }
@@ -53,7 +48,7 @@ this.props.readJson();
       <th   scope="col">date</th >    
       </tr>
   </thead>
-      {/* {this.props.data.map((user)=><User user={user} delete={this.props.delete}/>)} */}
+    
       {this.props.data.map((user)=><User user={user}/>)}
     </table >    
  <Date   className="form-control dateInput" /> 
@@ -72,7 +67,7 @@ function mapStateToProps(store, ownProps) {
 function mapDispatchToProps(dispatch) {
   return {
     readJson: () => dispatch(readJson()), 
-       delete: (id) => dispatch(deleteUser(id)),
+      
        getAllUsers:()=>dispatch(getAllUsers()),
     
   };
