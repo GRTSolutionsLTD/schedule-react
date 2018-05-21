@@ -1,6 +1,6 @@
 import React from 'react'
 import{ readJson } from '../actions/readJsonAction'
-import {getAllUsers} from '../actions/presenceAction'
+import {getAllUsers} from '../actions/PresenceAction'
 import { connect } from 'react-redux';
 import Date from '../components/DatePicker'
 import moment from "moment";
