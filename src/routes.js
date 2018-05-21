@@ -4,9 +4,18 @@ import App from './components/App'
 import Home from './pages/Home'
 import Todo from './pages/Todo'
 import Weather from './pages/Weather'
+<<<<<<< HEAD
 import PresenceReport from './components/PresenceReport'
 import Presence from './pages/Presence'
 import LogIn from './pages/LogIn'
+=======
+
+import PresenceReport from './components/PresenceReport'
+
+import Presence from './pages/Presence'
+import LogIn from './pages/LogIn'
+
+>>>>>>> 5251c4baeae731704db7dc144f59088f1be23251
 
 const routes = (
   <Route path="/" component={App}>

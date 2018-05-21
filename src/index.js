@@ -8,6 +8,8 @@ import { syncHistoryWithStore } from 'react-router-redux'
 import { configureStore } from './store'
 import registerServiceWorker from './registerServiceWorker'
 import routes from './routes'
+
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './styles/main.css'
 
 const state = window.__initialState__ || undefined

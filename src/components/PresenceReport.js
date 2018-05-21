@@ -1,6 +1,11 @@
 import React from 'react'
 import{ readJson } from '../actions/readJsonAction'
+<<<<<<< HEAD
 import {getAllUsers} from '../actions/PresenceAction'
+=======
+import {getAllUsers} from '../actions/presenceAction'
+
+>>>>>>> 5251c4baeae731704db7dc144f59088f1be23251
 import { connect } from 'react-redux';
 import Date from '../components/DatePicker'
 
@@ -67,7 +72,11 @@ function mapStateToProps(store, ownProps) {
 function mapDispatchToProps(dispatch) {
   return {
     readJson: () => dispatch(readJson()), 
+<<<<<<< HEAD
       
+=======
+      //  delete: (id) => dispatch(deleteUser(id)),
+>>>>>>> 5251c4baeae731704db7dc144f59088f1be23251
        getAllUsers:()=>dispatch(getAllUsers()),
     
   };
