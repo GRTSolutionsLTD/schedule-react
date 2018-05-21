@@ -1,10 +1,10 @@
 import moment from "moment";
 const users=
-[{ID:1,Name:"Mina",date:new Date(),FromHour:new Date(),ToHour:new Date()},
-{ID:2,Name:"Lea",date:new Date(),FromHour:new Date(),ToHour:new Date()},
-{ID:3,Name:"Rachel",date:new Date(),FromHour:new Date(),ToHour:new Date()},
-{ID:4,Name:"Shana",date:new Date(),FromHour:new Date(),ToHour:new Date()},
-{ID:5,Name:"Lira",date:new Date(),FromHour:new Date(),ToHour:new Date()}];
+[{ID:1,Name:"Mina",date:new Date('04/02/2013'),FromHour:new Date(2013,2,1,1,10),ToHour:new Date(2013,2,1,4,10),sum:new Date(2013,2,1,3,10)},
+{ID:2,Name:"Lea",date:new Date('04/02/2015'),FromHour:new Date(2013,2,1,2,2),ToHour:new Date(2013,2,1,4,10),sum:new Date(2013,2,1,2,10)},
+{ID:3,Name:"Rachel",date:new Date('05/02/2014'),FromHour:new Date(2014,2,1,2,2),ToHour:new Date(2014,2,1,4,10),sum:new Date(2013,2,1,2,10)},
+{ID:4,Name:"Shana",date:new Date('04/02/2016'),FromHour:new Date(2013,2,1,2,2),ToHour:new Date(2013,2,1,4,10),sum:new Date(2013,2,1,2,10)},
+{ID:5,Name:"Lira",date:new Date('04/02/2016'),FromHour:new Date(2013,2,1,2,2),ToHour:new Date(2013,2,1,4,10),sum:new Date(2013,2,1,2,10)}];
 
 
 const reducer = (state ={data:users,filterList:users}, action) => {
@@ -34,12 +34,12 @@ const reducer = (state ={data:users,filterList:users}, action) => {
        
        
             case 'ADD_ENTER':
-                newState.data.push(action.User);
-                return newState;
+               { debugger;
+                   newState.data.push(action.User);
+                return newState;}
             case 'ADD_EXIT':
            {
                debugger;
-    
     
                let u=newState.data.find(p=>p.ID===action.User.ID);
             u.ToHour=action.ToHour;

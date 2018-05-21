@@ -7,10 +7,10 @@ export const addenter = (User,time) => {
   return { 
     type: types.ADD_ENTER,
     User:{
-       id:User.id,
-      name:User.name,
+       ID:User.ID,
+      Name:User.Name,
       date:moment(new Date()).format("MM-DD-YYYY") ,
-      enter:time,
+      FromHour:time,
     }
   };
  
@@ -19,7 +19,7 @@ export const addexit =(User,time) => {
     return {
       type: types.ADD_EXIT,
       User:User,
-      exit:time,
+      ToHour:time,
     };
   }
   export const getAllUsers =() => {

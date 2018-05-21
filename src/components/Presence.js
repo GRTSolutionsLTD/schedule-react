@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {addenter,addexit} from '../actions/presenceAction'
+import {addenter,addexit} from '../actions/PresenceAction'
 import moment from 'moment';
 import ModalExample from '../components/AlertTry'
 import { Button } from 'reactstrap';
@@ -23,7 +23,7 @@ class Presence extends React.Component {
     
     AddExitclick=()=>{
         alert("exite done");
-        debugger;
+
         let time= moment(new Date()) ;   
         this.props.addExit(this.state.user,time);
     }
@@ -31,7 +31,7 @@ class Presence extends React.Component {
     render() {
         debugger;
         return <div>
-            {this.props.data.map((a, i) =><div key={i}> <p >{a.Name}</p></div>)}
+            {/* {this.props.data.map((a, i) =><div key={i}> <p >{a.Name}</p></div>)} */}
             {/* <button style={{ backgroundColor: "green" }} onClick={this.AddEnterclick} >Enter</button> */}
             <ModalExample buttonLabel="Alert" />
              

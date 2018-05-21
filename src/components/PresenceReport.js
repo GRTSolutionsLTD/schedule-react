@@ -15,9 +15,9 @@ class User extends React.Component {
       <td>{this.props.user.ID}</td>
       <td>{this.props.user.Name}</td>
       <td>{moment(this.props.user.date).format("MM-DD-YYYY")}</td>
-      <td>{moment(this.props.user.FromHour).format("HH-mm")}</td>
-      <td>{moment(this.props.user.ToHour).format("HH-mm")}</td>
-      
+      <td>{moment(this.props.user.FromHour).format("HH:mm")}</td>
+      <td>{moment(this.props.user.ToHour).format("HH:mm")}</td>
+      <td>{moment(this.props.user.sum).format("HH")}</td>
       </tr>
     );
   }
@@ -44,6 +44,7 @@ this.props.readJson();
       <th   scope="col">date</th >   
       <th   scope="col">from an hour</th >
       <th   scope="col">to an hour</th >
+      <th   scope="col">sum</th >
     
       </tr>
   </thead>
