@@ -14,6 +14,11 @@ const Navigation = ({ className, buttonClassName }) =>
     </Link>
     <Link className={buttonClassName} to="PresenceReport">
     Presence Report
+    <Link className={buttonClassName} to="presence">
+    Presence
+    </Link>
+    <Link className={buttonClassName} to="logIn">
+    LogIn
     </Link>
   </nav>
 

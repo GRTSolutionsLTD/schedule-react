@@ -6,6 +6,8 @@ import todos from './reducers/todos'
 import visibilityFilter from './reducers/visibilityFilter'
 import weatherReducer from './reducers/weatherReducer'
 import PresenceReportReducer from'./reducers/PresenceReportReducer'
+import RePresence from './reducers/RePresence'
+import ReLogIn from './reducers/ReLogIn'
 export function configureStore(history, initialState) {
 
     const reducer = combineReducers({
@@ -13,6 +15,8 @@ export function configureStore(history, initialState) {
         PresenceReportReducer,
         visibilityFilter,
         weatherReducer,
+        RePresence,
+        ReLogIn,
         routing: routerReducer
     })
 
