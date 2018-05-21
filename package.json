@@ -14,14 +14,18 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap": "^4.0.0",
     "moment": "^2.22.1",
+    "mongodb": "^3.1.0-beta4",
     "react": "^16.3.2",
     "react-bootstrap": "^0.32.1",
     "react-clock": "^2.3.0",
     "react-do": "^1.1.6",
-    "react-dom": "^16.2.0",
-    "react-moment": "^0.7.0"
+    "react-dom": "^16.3.2",
+    "react-moment": "^0.7.0",
+    "react-popup": "^0.9.3",
+    "reactjs-popup": "^1.1.1",
+    "reactstrap": "^6.0.1"
   },
   "devDependencies": {
     "api-book": "^0.2.4",

@@ -2,6 +2,7 @@ import React from 'react'
 import { form } from 'react-bootstrap';
 import {connect} from 'react-redux'
 import {logIn} from '../actions/LogInAction'
+import { Button,InputGroup,InputGroupAddon,Input,FormGroup,Col,Label } from 'reactstrap';
 class LogIn extends React.Component {
     constructor(props) {
         super(props);
@@ -31,21 +32,29 @@ class LogIn extends React.Component {
     render() {
 
         return <form className="form-group row" onSubmit={this.handleSubmit}>
-            <div className="form-group">
-                <label className="col-sm-2 col-form-label" htmlFor="UserName">User Name
-                <div class="col-sm-10">
-            <input type="text"  className="form-control form-control-plaintext" placeholder="Name" value={this.state.nameValue} onChange={this.handleChange} name="UserName" />
-            </div>
-                </label>
-            </div>
-            <div class="form-group row">
-                <label className="col-sm-2 col-form-label" htmlFor="Password">Password 
-                <div class="col-sm-10">
-            <input type="password" className="form-control" placeholder="Password" value={this.state.passwordValue} onChange={this.handleChange} name="Password" />
-            </div>
-                </label>
-            </div>
-            <input className="c-button" type="submit" value="Submit" />
+
+<FormGroup row>
+          <Label for="UserName" sm={4}>User Name</Label>
+          <Col sm={10}>
+          <Input type="text"   placeholder="Name" value={this.state.nameValue} onChange={this.handleChange} name="UserName" />
+          </Col>
+        </FormGroup>
+
+
+      <FormGroup row>
+          <Label for="Password" sm={4}>Password</Label>
+          <Col sm={10}>
+          <Input type="password" placeholder="Password" value={this.state.passwordValue} onChange={this.handleChange} name="Password" />
+          </Col>
+        </FormGroup>
+
+
+          
+            <Col sm={10}>
+            <Button outline color="danger" type="submit"  value="Submit" >submit</Button>
+            </Col>
+
+             
         </form>
     }
 }
