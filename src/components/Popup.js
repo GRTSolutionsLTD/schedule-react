@@ -30,7 +30,7 @@ class Prompt extends React.Component {
         return <input type="text" placeholder={this.props.placeholder} className="mm-popup__input" value={this.state.value} onChange={this.onChange} />;
     }
 }
-
+export default Popup
 /** Prompt plugin */
 Popup.registerPlugin('prompt', function (defaultValue, placeholder, callback) {
     let promptValue = null;
@@ -60,4 +60,3 @@ Popup.registerPlugin('prompt', function (defaultValue, placeholder, callback) {
 Popup.plugins().prompt('', 'Type your name', function (value) {
     Popup.alert('You typed: ' + value);
 });
-export default Popup
