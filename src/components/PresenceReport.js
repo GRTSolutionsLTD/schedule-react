@@ -66,7 +66,12 @@ function mapStateToProps(store, ownProps) {
 function mapDispatchToProps(dispatch) {
   return {
     readJson: () => dispatch(readJson()), 
+<<<<<<< HEAD
          getAllUsers:()=>dispatch(getAllUsers()),
+=======
+      
+       getAllUsers:()=>dispatch(getAllUsers()),
+>>>>>>> bd75092e60064201c0947b7c3e58da11b45801c9
     
   };
 }
