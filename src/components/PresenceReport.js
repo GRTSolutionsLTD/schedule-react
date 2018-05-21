@@ -1,7 +1,7 @@
 import React from 'react'
 import{ readJson } from '../actions/readJsonAction'
 import {getAllUsers} from '../actions/presenceAction'
-import {deleteUser} from '../actions/presenceAction'
+
 import { connect } from 'react-redux';
 import Date from '../components/DatePicker'
 
@@ -72,7 +72,7 @@ function mapStateToProps(store, ownProps) {
 function mapDispatchToProps(dispatch) {
   return {
     readJson: () => dispatch(readJson()), 
-       delete: (id) => dispatch(deleteUser(id)),
+      //  delete: (id) => dispatch(deleteUser(id)),
        getAllUsers:()=>dispatch(getAllUsers()),
     
   };

@@ -22,3 +22,8 @@ export const addexit =(User,time) => {
       exit:time,
     };
   }
+ export const getAllUsers=(User,time)=>{
+   return{
+     type:types.GET_ALL_USERS
+   };
+ }
