@@ -47,12 +47,10 @@ this.props.readJson();
     <table className="table-hover table">
     <thead className="thead-light">
     <tr>
-   
       <th   scope="col">id</th >
       <th   scope="col">from an hour</th >
       <th   scope="col">to an hour</th >
-      <th   scope="col">date</th >
-      
+      <th   scope="col">date</th >    
       </tr>
   </thead>
       {/* {this.props.data.map((user)=><User user={user} delete={this.props.delete}/>)} */}
