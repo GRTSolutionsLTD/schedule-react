@@ -1,31 +1,23 @@
 import React from 'react'
 import{ readJson } from '../actions/readJsonAction'
-<<<<<<< HEAD
-import {getAllUsers} from '../actions/PresenceAction'
-=======
 import {getAllUsers} from '../actions/presenceAction'
-
->>>>>>> 5251c4baeae731704db7dc144f59088f1be23251
 import { connect } from 'react-redux';
 import Date from '../components/DatePicker'
-
+import moment from "moment";
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
-  
-
-   
-
+// import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 class User extends React.Component {
   
   render(){
     return(
   
       <tr>
-        
       <td>{this.props.user.ID}</td>
-      <td>{this.props.user.FromHour}</td>
-      <td>{this.props.user.ToHour}</td>
-      <td>{this.props.user.date}</td>
+      <td>{this.props.user.Name}</td>
+      <td>{moment(this.props.user.date).format("MM-DD-YYYY")}</td>
+      <td>{moment(this.props.user.FromHour).format("HH-mm")}</td>
+      <td>{moment(this.props.user.ToHour).format("HH-mm")}</td>
+      
       </tr>
     );
   }
@@ -48,9 +40,11 @@ this.props.readJson();
     <thead className="thead-light">
     <tr>
       <th   scope="col">id</th >
+      <th   scope="col">name</th >   
+      <th   scope="col">date</th >   
       <th   scope="col">from an hour</th >
       <th   scope="col">to an hour</th >
-      <th   scope="col">date</th >    
+    
       </tr>
   </thead>
     
@@ -72,12 +66,7 @@ function mapStateToProps(store, ownProps) {
 function mapDispatchToProps(dispatch) {
   return {
     readJson: () => dispatch(readJson()), 
-<<<<<<< HEAD
-      
-=======
-      //  delete: (id) => dispatch(deleteUser(id)),
->>>>>>> 5251c4baeae731704db7dc144f59088f1be23251
-       getAllUsers:()=>dispatch(getAllUsers()),
+         getAllUsers:()=>dispatch(getAllUsers()),
     
   };
 }

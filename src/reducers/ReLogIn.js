@@ -1,8 +1,8 @@
 import moment from "moment";
 
 const NewUser ={ 
-    id: 0,
-    name: "",
+    ID: 0,
+    Name: "",
     date:moment(new Date()).format("MM-DD-YYYY") ,
     enter:moment(new Date()).format("HH:mm") ,
     exit:moment(new Date()).format("HH:mm") ,

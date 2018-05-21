@@ -2,7 +2,7 @@ import React from 'react'
 import { form } from 'react-bootstrap';
 import {connect} from 'react-redux'
 import {logIn} from '../actions/LogInAction'
-import { Button,InputGroup,InputGroupAddon,Input,FormGroup,Col,Label } from 'reactstrap';
+import { Button,Input,FormGroup,Col,Label } from 'reactstrap';
 class LogIn extends React.Component {
     constructor(props) {
         super(props);
@@ -24,8 +24,8 @@ class LogIn extends React.Component {
         event.preventDefault();
         debugger;
         this.props.logIn({
-            name:this.state.nameValue,
-            id:this.state.passwordValue,
+            Name:this.state.nameValue,
+            ID:this.state.passwordValue,
         });
     }
 
