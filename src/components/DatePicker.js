@@ -17,19 +17,23 @@ class Date extends React.Component {
     };
     this.handleChange = this.handleChange.bind(this);
   }
- 
+ filter= ()=>{
+   this.props.filterByDate(moment(this.state.startDate).format("MM-DD-YYYY"),this.props.data);
+ }
   handleChange(date) {
     this.setState({
       startDate: date
     });
-    this.props.filterByDate(moment(this.state.startDate).format("MM-DD-YYYY"));
+   
   }
  
   render() {
-    return <DatePicker
+    return <div>
+      <button onClick={this.filter}>filter</button>
+      <DatePicker
         selected={this.state.startDate}
         onChange={this.handleChange}
-    />;
+    /></div>;
   }
 }
 
@@ -41,7 +45,7 @@ function mapStateToProps(store, ownProps) {
 }
 function mapDispatchToProps(dispatch) {
   return {
-    filterByDate: (date) => dispatch(filterByDate(date)),
+    filterByDate: (date,data) => dispatch(filterByDate(date,data)),
       // onLoad: () => dispatch(onLoad()),
       // OnAddRecord: (record) => dispatch(OnAddRecord(record)),
       // OnUpdateRecord: (record) => dispatch(OnUpdateRecord(record)),            

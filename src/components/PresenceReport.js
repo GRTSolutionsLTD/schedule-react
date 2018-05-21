@@ -1,16 +1,22 @@
 import React from 'react'
-
+import{ readJson } from '../actions/readJsonAction'
+import {getAllUsers} from '../actions/presenceAction'
 import {deleteUser} from '../actions/presenceAction'
 import { connect } from 'react-redux';
 import Date from '../components/DatePicker'
-// import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
+  
+
+   
 
 class User extends React.Component {
   
   render(){
     return(
       <div>
-        <button onClick={() => this.props.delete(this.props.user.ID)}>delete</button>
+        {/* <button onClick={() => this.props.delete(this.props.user.ID)}>delete</button> */}
     <tbody>
       <tr>
         
@@ -25,26 +31,36 @@ class User extends React.Component {
   }
 }
 class PresenceReport extends React.Component {
+constructor(props)
+{
+  super(props);
+this.props.readJson();
+}
 
   render(){
     
     return (
    
   <main>
+   
     <div>
-    <table className="table">
-    <thead>
+    <table className="table-hover table">
+    <thead className="thead-light">
     <tr>
-    <th scope="col">#</th>
-      <th scope="col">id</th>
-      <th scope="col">from an hour</th>
-      <th scope="col">to an hour</th>
+   
+      <th   scope="col">id</th >
+      <th   scope="col">from an hour</th >
+      <th   scope="col">to an hour</th >
+      <th   scope="col">date</th >
+      
       </tr>
   </thead>
-      {this.props.data.map((user)=><User user={user} delete={this.props.delete}/>)}
-       
-    </table>    
- <Date /> 
+      {/* {this.props.data.map((user)=><User user={user} delete={this.props.delete}/>)} */}
+      {this.props.data.map((user)=><User user={user}/>)}
+    </table >    
+ <Date   className="form-control dateInput" /> 
+      
+ <button onClick={this.props.getAllUsers}>The whole list</button>
     </div>
     </main>
     )
@@ -52,16 +68,17 @@ class PresenceReport extends React.Component {
 }
 function mapStateToProps(store, ownProps) {
   return {
-      data: store.PresenceReportReducer.data  
+      data: store.PresenceReportReducer.filterList  
   };
 }
 function mapDispatchToProps(dispatch) {
   return {
+    readJson: () => dispatch(readJson()), 
        delete: (id) => dispatch(deleteUser(id)),
-      // onLoad: () => dispatch(onLoad()),
-      // OnAddRecord: (record) => dispatch(OnAddRecord(record)),
-      // OnUpdateRecord: (record) => dispatch(OnUpdateRecord(record)),            
+       getAllUsers:()=>dispatch(getAllUsers()),
+    
   };
 }
+
 export default connect(mapStateToProps, mapDispatchToProps)(PresenceReport);
 
