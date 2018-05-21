@@ -4,7 +4,7 @@
   "homepage": "http://yingray.github.io/create-react-redux-app",
   "scripts": {
     "prestart": "npm run build:css",
-    "start": "npm run watch:css & react-scripts start",
+    "start": "react-scripts start",
     "build": "npm run build:css && react-scripts build",
     "build:css": "node-sass-chokidar src/styles -o src/styles",
     "watch:css": "node-sass-chokidar src/styles -o src/styles --watch --recursive",
@@ -14,8 +14,14 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "bootstrap": "^4.0.0-alpha.6",
+    "moment": "^2.22.1",
+    "react": "^16.3.2",
+    "react-bootstrap": "^0.32.1",
+    "react-clock": "^2.3.0",
+    "react-do": "^1.1.6",
+    "react-dom": "^16.2.0",
+    "react-moment": "^0.7.0"
   },
   "devDependencies": {
     "api-book": "^0.2.4",

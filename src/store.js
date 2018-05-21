@@ -5,13 +5,16 @@ import thunkMiddleware from 'redux-thunk'
 import todos from './reducers/todos'
 import visibilityFilter from './reducers/visibilityFilter'
 import weatherReducer from './reducers/weatherReducer'
-
+import RePresence from './reducers/RePresence'
+import ReLogIn from './reducers/ReLogIn'
 export function configureStore(history, initialState) {
 
     const reducer = combineReducers({
         todos,
         visibilityFilter,
         weatherReducer,
+        RePresence,
+        ReLogIn,
         routing: routerReducer
     })
 
