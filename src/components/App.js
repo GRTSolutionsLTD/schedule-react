@@ -1,12 +1,24 @@
 import React from 'react'
 import Header from './Header'
+import{ readJson } from '../actions/readJsonAction'
+import { connect } from 'react-redux'   
+class App extends React.Component {
+  componentWillMount(){
 
-const App = ({ children }) =>
+// this.props.readJson();
+}
+  render(){
+    return(
   <div>
     <Header />
     <div>
-      {children}
+      {this.props.children}
     </div>
-  </div>
-
-export default App
+  </div>);
+  }}
+  function mapDispatchToProps(dispatch) {
+    return {
+      readJson: () => dispatch(readJson()),   
+    };
+  }
+  export default connect(mapDispatchToProps)(App);

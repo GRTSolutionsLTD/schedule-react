@@ -1,3 +1,6 @@
 export const ADD_TODO = 'ADD_TODO'
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
 export const TOGGLE_TODO = 'TOGGLE_TODO'
+export const FILTER_BY_DATR="FILTER_BY_DATR";
+export const DELETE_USER = 'DELETE_USER';
+export const READ_JSON = 'READ_JSON';

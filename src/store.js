@@ -5,11 +5,12 @@ import thunkMiddleware from 'redux-thunk'
 import todos from './reducers/todos'
 import visibilityFilter from './reducers/visibilityFilter'
 import weatherReducer from './reducers/weatherReducer'
-
+import PresenceReportReducer from'./reducers/PresenceReportReducer'
 export function configureStore(history, initialState) {
 
     const reducer = combineReducers({
         todos,
+        PresenceReportReducer,
         visibilityFilter,
         weatherReducer,
         routing: routerReducer
