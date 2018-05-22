@@ -19,4 +19,4 @@ npm-debug.log
 .idea
 
 *.log
-src/actions/PresenceAction.js
+

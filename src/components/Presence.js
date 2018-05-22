@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {addenter,addexit} from '../actions/PresenceAction'
+import {addenter,addexit} from '../actions/preAction'
 import moment from 'moment';
 import ModalExample from '../components/AlertTry'
 import { Button } from 'reactstrap';
