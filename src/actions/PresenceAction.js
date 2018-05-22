@@ -22,3 +22,4 @@ export const addexit =(User,time) => {
       exit:time,
     };
   }
+  export const getAllUsers =(User,time) => {
